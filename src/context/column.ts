@@ -27,6 +27,7 @@ interface ColumnCtx {
   pixelsPerMeter: number;
   scale: ColumnScale;
   zoom: number;
+  id?: string | number | null;
 }
 
 const ColumnContext = createContext<ColumnCtx>({
@@ -67,7 +68,15 @@ class ColumnProvider extends Component {
     zoom: 1
   };
   render() {
-    let { children, pixelsPerMeter, zoom, height, range, ...rest } = this.props;
+    let {
+      children,
+      pixelsPerMeter,
+      zoom,
+      height,
+      range,
+      id = null,
+      ...rest
+    } = this.props;
 
     //# Calculate correct range and height
     // Range overrides height if set
@@ -88,6 +97,7 @@ class ColumnProvider extends Component {
     const scaleClamped = scale.copy().clamp(true);
 
     const value = {
+      id,
       pixelsPerMeter,
       pixelHeight,
       zoom,
