@@ -76,13 +76,8 @@ const ColumnSVG = function(props) {
       ...rest,
       style
     },
-    h(
-      "g.backdrop",
-      {
-        transform: `translate(${paddingLeft},${paddingTop})`
-      },
-      children
-    )
+
+    children
   );
 };
 
