@@ -3,6 +3,8 @@
 Reusable user-interface primatives for rendering stratigraphic columns.
 Based on [React](https://reactjs.org) and [D3.js](https://d3js.org).
 
+**This repository has been moved it within [Macrostrat's web components monorepo](https://github.com/UW-Macrostrat/web-components).**
+
 ## Examples
 
 - [Column renderer](http://birdnest.geology.wisc.edu/section-renderer) for [Macrostrat](https://macrostrat.org) generalized, age-domain sections (prototype)
